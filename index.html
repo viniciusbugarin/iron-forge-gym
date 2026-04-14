@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Iron Forge Gym — Gimnasio Premium en Barcelona | Forja tu mejor versión</title>
+  <meta name="description" content="Iron Forge Gym: el gimnasio premium de Barcelona especializado en fuerza, fitness y transformación física. Entrenamiento personal, clases grupales, musculación y asesoramiento nutricional. Apúntate ahora.">
+  <meta name="keywords" content="gimnasio Barcelona, Iron Forge Gym, entrenamiento personal, clases HIIT, musculación, fitness Barcelona, gym Barcelona, transformación física">
+  <meta name="author" content="Iron Forge Gym">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#e31e25">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Iron Forge Gym — Forja tu mejor versión">
+  <meta property="og:description" content="Gimnasio premium en Barcelona. Fuerza, fitness y transformación física real.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23e31e25'/><text x='50%25' y='58%25' dominant-baseline='middle' text-anchor='middle' font-size='18'>💪</text></svg>">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SportsActivityLocation",
+    "name":"Iron Forge Gym",
+    "description":"Gimnasio premium especializado en fuerza, fitness y transformación física.",
+    "address":{"@type":"PostalAddress","streetAddress":"Avenida del Progreso, 45","addressLocality":"Barcelona","addressCountry":"ES"},
+    "telephone":"+34600987654",
+    "priceRange":"€€"
+  }
+  </script>
+
+<style>
+/* ============================================================
+   IRON FORGE GYM — Estilos completos (todo en un solo archivo)
+   Paleta: negro · rojo · blanco
+   ============================================================ */
+
+/* ── Variables ─────────────────────────────────────────────── */
+:root {
+  --rojo:      #e31e25;
+  --rojo-osc:  #b91219;
+  --rojo-vivo: #ff3a40;
+  --negro:     #0d0d0d;
+  --negro2:    #141414;
+  --negro3:    #1c1c1c;
+  --negro4:    #252525;
+  --gris:      #888;
+  --gris-claro:#ccc;
+  --blanco:    #ffffff;
+  --fuente:    'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body { font-family: var(--fuente); background: var(--negro); color: var(--blanco); line-height: 1.7; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; font-family: var(--fuente); }
+ul, ol { list-style: none; }
+
+/* ── Utilidades ────────────────────────────────────────────── */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+.rojo { color: var(--rojo); }
+
+/* ── Botones ───────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .85rem 2rem; border-radius: 4px; font-size: .9rem;
+  font-weight: 700; letter-spacing: .06em; text-transform: uppercase;
+  border: 2px solid transparent; transition: all .25s; cursor: pointer;
+}
+.btn-rojo {
+  background: var(--rojo); color: var(--blanco);
+  box-shadow: 0 4px 20px rgba(227,30,37,.4);
+}
+.btn-rojo:hover {
+  background: var(--rojo-vivo); transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(227,30,37,.55);
+}
+.btn-outline {
+  background: transparent; color: var(--blanco);
+  border-color: rgba(255,255,255,.35);
+}
+.btn-outline:hover { border-color: var(--rojo); color: var(--rojo); }
+
+/* ── Encabezados de sección ────────────────────────────────── */
+.section-tag {
+  display: inline-block; font-size: .72rem; font-weight: 800;
+  letter-spacing: .15em; text-transform: uppercase;
+  color: var(--rojo); margin-bottom: .75rem;
+}
+.section-tag::before { content: '— '; }
+.section-tag::after  { content: ' —'; }
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 900;
+  line-height: 1.1; margin-bottom: 1rem; letter-spacing: -.02em;
+}
+.section-sub {
+  font-size: 1.05rem; color: var(--gris-claro); max-width: 580px;
+  margin: 0 auto 3.5rem; text-align: center; line-height: 1.75;
+}
+.text-center { text-align: center; }
+
+/* ── Separador ─────────────────────────────────────────────── */
+.sep {
+  width: 60px; height: 4px; border-radius: 2px;
+  background: linear-gradient(90deg, var(--rojo), var(--rojo-vivo));
+  margin: 1rem auto 0;
+}
+.sep-left { margin-left: 0; }
+
+/* ════════════════════════════════════════════════════════════
+   NAV
+════════════════════════════════════════════════════════════ */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(13,13,13,.92);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  transition: background .3s;
+}
+.nav-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.1rem 0; gap: 1.5rem;
+}
+.nav-logo {
+  display: flex; align-items: center; gap: .75rem;
+  font-size: 1.3rem; font-weight: 900; letter-spacing: .04em;
+  color: var(--blanco);
+}
+.nav-logo-icon {
+  width: 38px; height: 38px;
+  background: var(--rojo); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 12px rgba(227,30,37,.5);
+}
+.nav-logo span { color: var(--rojo); }
+.nav-links {
+  display: flex; align-items: center; gap: .2rem;
+}
+.nav-links a {
+  padding: .5rem 1rem; font-size: .82rem; font-weight: 600;
+  color: rgba(255,255,255,.75); border-radius: 4px; letter-spacing: .04em;
+  transition: color .2s, background .2s;
+}
+.nav-links a:hover { color: var(--blanco); background: rgba(255,255,255,.07); }
+.nav-cta {
+  background: var(--rojo) !important; color: var(--blanco) !important;
+  border-radius: 4px; font-size: .78rem !important; font-weight: 800 !important;
+  letter-spacing: .08em !important;
+}
+.nav-cta:hover { background: var(--rojo-vivo) !important; }
+
+/* Hamburguesa móvil */
+.nav-ham {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; padding: .5rem; cursor: pointer;
+}
+.nav-ham span { display: block; width: 26px; height: 2px; background: var(--blanco); border-radius: 2px; transition: all .3s; }
+.nav-ham.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.nav-ham.open span:nth-child(2) { opacity: 0; }
+.nav-ham.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+.nav-mobile {
+  display: none; flex-direction: column; gap: .25rem;
+  padding: 1rem 1.5rem 1.5rem;
+  border-top: 1px solid rgba(255,255,255,.07);
+}
+.nav-mobile a {
+  padding: .75rem 1rem; font-size: .9rem; font-weight: 600;
+  color: rgba(255,255,255,.8); border-radius: 4px;
+  transition: background .2s, color .2s;
+}
+.nav-mobile a:hover { background: rgba(227,30,37,.15); color: var(--rojo); }
+.nav-mobile.open { display: flex; }
+
+/* ════════════════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════════════════ */
+#inicio {
+  min-height: 100vh; display: flex; flex-direction: column; justify-content: center;
+  padding: 7rem 0 5rem; position: relative; overflow: hidden;
+}
+
+/* Fondo con gradiente + ruido visual */
+#inicio::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse at 70% 50%, rgba(227,30,37,.18) 0%, transparent 60%),
+    radial-gradient(ellipse at 10% 80%, rgba(227,30,37,.12) 0%, transparent 50%),
+    var(--negro);
+}
+/* Líneas decorativas de fondo */
+#inicio::after {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+.hero-inner { position: relative; z-index: 2; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: .5rem;
+  background: rgba(227,30,37,.15); border: 1px solid rgba(227,30,37,.35);
+  color: var(--rojo-vivo); padding: .4rem 1rem; border-radius: 99px;
+  font-size: .75rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase;
+  margin-bottom: 1.5rem; animation: fadeDown .6s ease both;
+}
+.badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--rojo-vivo); animation: pulse 1.8s infinite; }
+
+.hero-h1 {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-weight: 900; line-height: 1; letter-spacing: -.04em;
+  margin-bottom: 1.2rem; animation: fadeDown .7s .1s ease both;
+}
+.hero-h1 em { font-style: normal; color: var(--rojo); }
+
+.hero-desc {
+  font-size: 1.15rem; color: var(--gris-claro);
+  max-width: 540px; line-height: 1.75; margin-bottom: 2.5rem;
+  animation: fadeDown .7s .2s ease both;
+}
+
+.hero-ctas {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+  animation: fadeDown .7s .3s ease both;
+}
+
+.hero-stats {
+  display: flex; gap: 2.5rem; margin-top: 4rem; flex-wrap: wrap;
+  animation: fadeDown .7s .4s ease both;
+}
+.stat { border-left: 3px solid var(--rojo); padding-left: 1rem; }
+.stat-num { font-size: 2.2rem; font-weight: 900; color: var(--blanco); line-height: 1; }
+.stat-label { font-size: .78rem; color: var(--gris); font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+
+/* Barra decorativa lateral */
+.hero-line {
+  position: absolute; right: 10%; top: 50%; transform: translateY(-50%);
+  width: 3px; height: 60%; background: linear-gradient(180deg, transparent, var(--rojo), transparent);
+  opacity: .35; z-index: 2;
+}
+
+/* ════════════════════════════════════════════════════════════
+   SOBRE NOSOTROS
+════════════════════════════════════════════════════════════ */
+#nosotros { padding: 6rem 0; background: var(--negro2); }
+
+.nosotros-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;
+}
+.nosotros-visual {
+  position: relative; display: flex; align-items: center; justify-content: center;
+}
+.nosotros-box {
+  width: 100%; aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--negro3), var(--negro4));
+  border: 1px solid rgba(255,255,255,.08); border-radius: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 1.2rem; position: relative; overflow: hidden;
+}
+.nosotros-box::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(227,30,37,.12), transparent 60%);
+}
+.nosotros-emoji { font-size: 5rem; z-index: 1; }
+.nosotros-box-text { font-size: 1.2rem; font-weight: 800; letter-spacing: .04em; z-index: 1; color: rgba(255,255,255,.6); }
+
+.nosotros-badge-abs {
+  position: absolute; bottom: -1.5rem; right: -1.5rem;
+  background: var(--rojo); border-radius: 8px; padding: 1.2rem 1.5rem; text-align: center;
+  box-shadow: 0 8px 30px rgba(227,30,37,.5);
+}
+.nosotros-badge-abs strong { display: block; font-size: 2.2rem; font-weight: 900; color: white; line-height: 1; }
+.nosotros-badge-abs span  { font-size: .72rem; color: rgba(255,255,255,.8); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+
+.nosotros-texto { }
+.nosotros-texto h2 { margin-bottom: 1.2rem; text-align: left; }
+.nosotros-texto p { color: var(--gris-claro); font-size: .95rem; line-height: 1.85; margin-bottom: 1.25rem; }
+
+.pilares { display: flex; flex-direction: column; gap: .9rem; margin-top: 1.5rem; }
+.pilar {
+  display: flex; align-items: center; gap: 1rem;
+  background: var(--negro3); border: 1px solid rgba(255,255,255,.07);
+  border-radius: 6px; padding: 1rem 1.2rem;
+  transition: border-color .2s, transform .2s;
+}
+.pilar:hover { border-color: var(--rojo); transform: translateX(4px); }
+.pilar-icon {
+  width: 44px; height: 44px; border-radius: 6px;
+  background: rgba(227,30,37,.12); display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem; flex-shrink: 0;
+}
+.pilar-text strong { display: block; font-size: .9rem; font-weight: 700; color: var(--blanco); margin-bottom: .1rem; }
+.pilar-text span   { font-size: .8rem; color: var(--gris); }
+
+/* ════════════════════════════════════════════════════════════
+   SERVICIOS
+════════════════════════════════════════════════════════════ */
+#servicios { padding: 6rem 0; background: var(--negro); }
+
+.servicios-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+
+.serv-card {
+  background: var(--negro2); border: 1px solid rgba(255,255,255,.07);
+  border-radius: 10px; padding: 2rem 1.75rem;
+  transition: border-color .25s, transform .25s, box-shadow .25s;
+  position: relative; overflow: hidden;
+}
+.serv-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--rojo), var(--rojo-vivo));
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .3s ease;
+}
+.serv-card:hover { border-color: rgba(227,30,37,.3); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,.4); }
+.serv-card:hover::before { transform: scaleX(1); }
+
+.serv-icon {
+  width: 60px; height: 60px; border-radius: 10px;
+  background: rgba(227,30,37,.1); display: flex; align-items: center;
+  justify-content: center; font-size: 1.7rem; margin-bottom: 1.2rem;
+  transition: background .2s;
+}
+.serv-card:hover .serv-icon { background: rgba(227,30,37,.2); }
+
+.serv-card h3 { font-size: 1.05rem; font-weight: 800; margin-bottom: .6rem; }
+.serv-card p  { font-size: .85rem; color: var(--gris-claro); line-height: 1.7; }
+.serv-link    { display: inline-block; margin-top: 1rem; font-size: .78rem; font-weight: 700; color: var(--rojo); letter-spacing: .06em; text-transform: uppercase; }
+.serv-link::after { content: ' →'; transition: margin .2s; }
+.serv-card:hover .serv-link::after { margin-left: 4px; }
+
+/* ════════════════════════════════════════════════════════════
+   PLANES / PRECIOS
+════════════════════════════════════════════════════════════ */
+#planes { padding: 6rem 0; background: var(--negro2); }
+
+.planes-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+  align-items: start;
+}
+
+.plan-card {
+  background: var(--negro3); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px; padding: 2.2rem 2rem;
+  transition: transform .25s, box-shadow .25s;
+  position: relative;
+}
+.plan-card:hover { transform: translateY(-6px); box-shadow: 0 25px 60px rgba(0,0,0,.5); }
+
+/* Plan destacado */
+.plan-card.destacado {
+  background: linear-gradient(145deg, #1e0203, #220508);
+  border-color: var(--rojo);
+  transform: scale(1.04);
+  box-shadow: 0 20px 60px rgba(227,30,37,.3);
+}
+.plan-card.destacado:hover { transform: scale(1.04) translateY(-6px); }
+
+.plan-badge {
+  position: absolute; top: -1px; left: 50%; transform: translateX(-50%);
+  background: var(--rojo); color: white;
+  font-size: .65rem; font-weight: 900; letter-spacing: .1em; text-transform: uppercase;
+  padding: .35rem 1.2rem; border-radius: 0 0 8px 8px;
+  box-shadow: 0 4px 14px rgba(227,30,37,.5);
+}
+
+.plan-nombre {
+  font-size: .8rem; font-weight: 800; color: var(--gris);
+  text-transform: uppercase; letter-spacing: .12em; margin-bottom: 1.2rem;
+}
+.plan-precio {
+  display: flex; align-items: flex-end; gap: .2rem;
+  margin-bottom: 1.5rem; line-height: 1;
+}
+.plan-precio sup  { font-size: 1.2rem; font-weight: 700; color: var(--rojo); align-self: flex-start; margin-top: .5rem; }
+.plan-precio big  { font-size: 3.5rem; font-weight: 900; color: var(--blanco); }
+.plan-precio small { font-size: .85rem; color: var(--gris); margin-bottom: .4rem; }
+
+.plan-desc { font-size: .82rem; color: var(--gris-claro); margin-bottom: 1.5rem; line-height: 1.65; }
+
+.plan-lista { display: flex; flex-direction: column; gap: .65rem; margin-bottom: 2rem; }
+.plan-item {
+  display: flex; align-items: center; gap: .75rem;
+  font-size: .84rem; color: var(--gris-claro);
+}
+.plan-item .check { color: var(--rojo); font-weight: 900; font-size: .9rem; flex-shrink: 0; }
+.plan-item.no     { opacity: .35; }
+.plan-item.no .check { color: var(--gris); }
+
+.plan-btn {
+  width: 100%; padding: .9rem; border-radius: 6px;
+  font-size: .82rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase;
+  border: 2px solid var(--rojo); background: transparent; color: var(--rojo);
+  transition: all .2s;
+}
+.plan-btn:hover { background: var(--rojo); color: white; }
+.plan-btn.primary { background: var(--rojo); color: white; }
+.plan-btn.primary:hover { background: var(--rojo-vivo); border-color: var(--rojo-vivo); }
+
+/* ════════════════════════════════════════════════════════════
+   INSTALACIONES
+════════════════════════════════════════════════════════════ */
+#instalaciones { padding: 6rem 0; background: var(--negro); }
+
+.instal-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.2rem;
+}
+.instal-card {
+  background: var(--negro2); border: 1px solid rgba(255,255,255,.07);
+  border-radius: 10px; padding: 2rem; display: flex; align-items: flex-start; gap: 1.2rem;
+  transition: border-color .22s, transform .22s;
+}
+.instal-card:hover { border-color: rgba(227,30,37,.4); transform: translateY(-4px); }
+.instal-ico {
+  width: 52px; height: 52px; border-radius: 8px; flex-shrink: 0;
+  background: rgba(227,30,37,.1); display: flex; align-items: center;
+  justify-content: center; font-size: 1.5rem;
+}
+.instal-card h3 { font-size: .95rem; font-weight: 800; margin-bottom: .35rem; }
+.instal-card p  { font-size: .82rem; color: var(--gris-claro); line-height: 1.65; }
+
+/* ════════════════════════════════════════════════════════════
+   OPINIONES
+════════════════════════════════════════════════════════════ */
+#opiniones { padding: 6rem 0; background: var(--negro2); }
+
+.opiniones-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;
+}
+
+.opinion-card {
+  background: var(--negro3); border: 1px solid rgba(255,255,255,.07);
+  border-radius: 10px; padding: 2rem;
+  transition: transform .22s, box-shadow .22s;
+}
+.opinion-card:hover { transform: translateY(-5px); box-shadow: 0 18px 45px rgba(0,0,0,.4); }
+
+.stars { color: var(--rojo); font-size: 1rem; letter-spacing: .08em; margin-bottom: 1rem; }
+.opinion-texto {
+  font-size: .9rem; color: var(--gris-claro); line-height: 1.75;
+  margin-bottom: 1.5rem; font-style: italic;
+}
+.opinion-texto::before { content: '"'; font-size: 1.5rem; color: var(--rojo); font-style: normal; line-height: 0; vertical-align: -.3em; margin-right: .2rem; }
+.opinion-texto::after  { content: '"'; font-size: 1.5rem; color: var(--rojo); font-style: normal; line-height: 0; vertical-align: -.3em; margin-left: .2rem; }
+
+.opinion-autor { display: flex; align-items: center; gap: .9rem; }
+.opinion-avatar {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--rojo), var(--rojo-osc));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; font-weight: 700; flex-shrink: 0;
+}
+.opinion-nombre { font-size: .88rem; font-weight: 700; margin-bottom: .1rem; }
+.opinion-meta   { font-size: .73rem; color: var(--gris); }
+
+/* ════════════════════════════════════════════════════════════
+   CTA BANNER
+════════════════════════════════════════════════════════════ */
+.cta-banner {
+  padding: 5rem 0; position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #1a0203, var(--rojo-osc) 60%, #300508);
+}
+.cta-banner::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+.cta-inner { position: relative; z-index: 2; text-align: center; }
+.cta-inner h2 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900; margin-bottom: .75rem; }
+.cta-inner p  { font-size: 1.1rem; color: rgba(255,255,255,.85); margin-bottom: 2.5rem; max-width: 520px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+.btn-blanco   { background: var(--blanco); color: var(--rojo); border-color: var(--blanco); box-shadow: 0 4px 20px rgba(0,0,0,.25); }
+.btn-blanco:hover { background: var(--rojo); color: var(--blanco); border-color: var(--rojo); transform: translateY(-2px); }
+
+/* ════════════════════════════════════════════════════════════
+   CONTACTO
+════════════════════════════════════════════════════════════ */
+#contacto { padding: 6rem 0; background: var(--negro); }
+
+.contacto-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start;
+}
+
+.contacto-info h2 { text-align: left; }
+.contacto-info > p { color: var(--gris-claro); font-size: .95rem; margin: 1rem 0 2rem; line-height: 1.75; }
+
+.dato {
+  display: flex; align-items: flex-start; gap: 1rem;
+  margin-bottom: 1.2rem; padding: 1.1rem 1.2rem;
+  background: var(--negro2); border: 1px solid rgba(255,255,255,.07);
+  border-radius: 8px; transition: border-color .2s;
+}
+.dato:hover { border-color: rgba(227,30,37,.3); }
+.dato-ico  { font-size: 1.3rem; flex-shrink: 0; }
+.dato-label{ font-size: .72rem; color: var(--gris); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; }
+.dato-val  { font-size: .92rem; font-weight: 600; color: var(--blanco); margin-top: .15rem; }
+
+/* Formulario */
+.form-card {
+  background: var(--negro2); border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px; padding: 2.5rem;
+}
+.form-card h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem; }
+
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-full  { grid-column: span 2; }
+
+.form-group { display: flex; flex-direction: column; gap: .45rem; }
+.form-group label { font-size: .75rem; font-weight: 700; color: var(--gris-claro); text-transform: uppercase; letter-spacing: .06em; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: .8rem 1rem; border-radius: 6px;
+  background: var(--negro3); border: 1.5px solid rgba(255,255,255,.1);
+  color: var(--blanco); font-family: var(--fuente); font-size: .9rem;
+  outline: none; transition: border-color .2s, box-shadow .2s; resize: vertical;
+}
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,.25); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--rojo); box-shadow: 0 0 0 3px rgba(227,30,37,.15);
+}
+.form-group select option { background: var(--negro3); color: var(--blanco); }
+.form-group textarea { min-height: 130px; }
+
+.form-submit { margin-top: 1.2rem; }
+.form-submit .btn { width: 100%; justify-content: center; font-size: .9rem; font-weight: 900; }
+
+.form-nota { font-size: .73rem; color: var(--gris); text-align: center; margin-top: .75rem; }
+
+/* ════════════════════════════════════════════════════════════
+   FOOTER
+════════════════════════════════════════════════════════════ */
+footer {
+  background: var(--negro2); border-top: 1px solid rgba(255,255,255,.07);
+  padding: 4rem 0 2rem;
+}
+.footer-grid {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1.2fr; gap: 3rem;
+  margin-bottom: 3rem;
+}
+.footer-brand { }
+.footer-logo  { display: flex; align-items: center; gap: .75rem; margin-bottom: 1rem; }
+.footer-logo-icon {
+  width: 36px; height: 36px; background: var(--rojo); border-radius: 6px;
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+}
+.footer-logo-text { font-size: 1.15rem; font-weight: 900; letter-spacing: .04em; }
+.footer-logo-text span { color: var(--rojo); }
+.footer-brand p { font-size: .82rem; color: var(--gris); line-height: 1.75; max-width: 260px; }
+
+.footer-col h4 { font-size: .8rem; font-weight: 800; text-transform: uppercase; letter-spacing: .12em; color: var(--blanco); margin-bottom: 1.2rem; }
+.footer-col ul { display: flex; flex-direction: column; gap: .6rem; }
+.footer-col li a { font-size: .83rem; color: var(--gris); transition: color .2s; }
+.footer-col li a:hover { color: var(--rojo); }
+
+.footer-social { display: flex; gap: .7rem; margin-top: 1.2rem; }
+.social-btn {
+  width: 38px; height: 38px; border-radius: 6px;
+  background: var(--negro3); border: 1px solid rgba(255,255,255,.1);
+  display: flex; align-items: center; justify-content: center; font-size: 1rem;
+  transition: background .2s, border-color .2s;
+}
+.social-btn:hover { background: var(--rojo); border-color: var(--rojo); }
+
+.footer-bottom {
+  padding-top: 1.8rem; border-top: 1px solid rgba(255,255,255,.07);
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: .75rem;
+}
+.footer-bottom p  { font-size: .76rem; color: var(--gris); }
+.footer-bottom span { color: var(--rojo); }
+
+/* ════════════════════════════════════════════════════════════
+   ANIMACIONES
+════════════════════════════════════════════════════════════ */
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: .5; transform: scale(1.3); }
+}
+
+/* Aparición al hacer scroll */
+.appear { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+.appear.visible { opacity: 1; transform: translateY(0); }
+
+/* ════════════════════════════════════════════════════════════
+   RESPONSIVE
+════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .footer-grid   { grid-template-columns: 1fr 1fr; }
+  .nosotros-grid { gap: 3rem; }
+}
+
+@media (max-width: 860px) {
+  .nav-links  { display: none; }
+  .nav-ham    { display: flex; }
+  .servicios-grid { grid-template-columns: 1fr 1fr; }
+  .planes-grid    { grid-template-columns: 1fr; }
+  .plan-card.destacado { transform: scale(1); }
+  .plan-card.destacado:hover { transform: translateY(-6px); }
+  .opiniones-grid  { grid-template-columns: 1fr; }
+  .contacto-grid   { grid-template-columns: 1fr; }
+  .nosotros-grid   { grid-template-columns: 1fr; }
+  .nosotros-badge-abs { right: .5rem; bottom: .5rem; }
+  .instal-grid     { grid-template-columns: 1fr; }
+  .footer-grid     { grid-template-columns: 1fr 1fr; }
+  .hero-stats      { gap: 1.5rem; }
+}
+
+@media (max-width: 600px) {
+  .servicios-grid { grid-template-columns: 1fr; }
+  .form-grid      { grid-template-columns: 1fr; }
+  .form-full      { grid-column: span 1; }
+  .footer-grid    { grid-template-columns: 1fr; }
+  .footer-bottom  { flex-direction: column; text-align: center; }
+  .btn            { padding: .8rem 1.5rem; font-size: .82rem; }
+  .hero-ctas      { flex-direction: column; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+  .instal-grid    { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ═══ NAVEGACIÓN ══════════════════════════════════════════ -->
+<nav id="nav" role="navigation" aria-label="Navegación principal">
+  <div class="container">
+    <div class="nav-inner">
+
+      <a href="#inicio" class="nav-logo" aria-label="Iron Forge Gym — Inicio">
+        <div class="nav-logo-icon" aria-hidden="true">💪</div>
+        IRON <span>FORGE</span>
+      </a>
+
+      <ul class="nav-links" role="menubar">
+        <li><a href="#nosotros"      role="menuitem">Nosotros</a></li>
+        <li><a href="#servicios"     role="menuitem">Servicios</a></li>
+        <li><a href="#planes"        role="menuitem">Precios</a></li>
+        <li><a href="#instalaciones" role="menuitem">Instalaciones</a></li>
+        <li><a href="#opiniones"     role="menuitem">Opiniones</a></li>
+        <li><a href="#contacto" class="nav-cta" role="menuitem">Apúntate</a></li>
+      </ul>
+
+      <button class="nav-ham" id="navHam" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#planes">Precios</a>
+      <a href="#instalaciones">Instalaciones</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">📩 Apúntate ahora</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══ HERO ════════════════════════════════════════════════ -->
+<section id="inicio" role="banner">
+  <div class="container hero-inner">
+
+    <div class="hero-badge">
+      <span class="badge-dot" aria-hidden="true"></span>
+      Gimnasio Premium · Barcelona
+    </div>
+
+    <h1 class="hero-h1">
+      IRON<br>
+      <em>FORGE</em><br>
+      GYM
+    </h1>
+
+    <p class="hero-desc">
+      Forja tu mejor versión. Entrenamiento de fuerza, fitness y transformación física
+      en un espacio diseñado para quienes van en serio.
+    </p>
+
+    <div class="hero-ctas">
+      <a href="#contacto" class="btn btn-rojo">💪 Empieza hoy</a>
+      <a href="#planes"   class="btn btn-outline">Ver planes →</a>
+    </div>
+
+    <div class="hero-stats" role="list" aria-label="Estadísticas del gimnasio">
+      <div class="stat" role="listitem">
+        <div class="stat-num">+1.200</div>
+        <div class="stat-label">Socios activos</div>
+      </div>
+      <div class="stat" role="listitem">
+        <div class="stat-num">8 años</div>
+        <div class="stat-label">De experiencia</div>
+      </div>
+      <div class="stat" role="listitem">
+        <div class="stat-num">12</div>
+        <div class="stat-label">Entrenadores</div>
+      </div>
+      <div class="stat" role="listitem">
+        <div class="stat-num">2.500 m²</div>
+        <div class="stat-label">De instalaciones</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="hero-line" aria-hidden="true"></div>
+</section>
+
+<!-- ═══ SOBRE NOSOTROS ══════════════════════════════════════ -->
+<section id="nosotros" aria-labelledby="h-nosotros">
+  <div class="container">
+    <div class="nosotros-grid">
+
+      <div class="nosotros-visual appear">
+        <div class="nosotros-box">
+          <span class="nosotros-emoji" aria-hidden="true">🏋️</span>
+          <span class="nosotros-box-text">IRON FORGE GYM</span>
+        </div>
+        <div class="nosotros-badge-abs" aria-label="4,9 estrellas de valoración">
+          <strong>4,9</strong>
+          <span>⭐ Valoración</span>
+        </div>
+      </div>
+
+      <div class="nosotros-texto appear">
+        <p class="section-tag">Sobre nosotros</p>
+        <h2 class="section-title" id="h-nosotros">Más que un gimnasio,<br>un estilo de vida</h2>
+        <div class="sep sep-left"></div>
+        <p style="margin-top:1.5rem">
+          Iron Forge Gym nació con un objetivo claro: crear el espacio de entrenamiento
+          más completo y motivador de Barcelona. Aquí no importa tu nivel —
+          lo que importa es tu actitud.
+        </p>
+        <p>
+          Con más de 8 años forjando campeones anónimos, hemos acompañado a más de 1.200 socios
+          en su transformación física y mental. Nuestro equipo de 12 entrenadores certificados
+          está contigo en cada paso.
+        </p>
+        <div class="pilares">
+          <div class="pilar">
+            <div class="pilar-icon" aria-hidden="true">🎯</div>
+            <div class="pilar-text">
+              <strong>Metodología probada</strong>
+              <span>Entrenamiento basado en evidencia científica</span>
+            </div>
+          </div>
+          <div class="pilar">
+            <div class="pilar-icon" aria-hidden="true">🔥</div>
+            <div class="pilar-text">
+              <strong>Ambiente motivador</strong>
+              <span>Comunidad comprometida con sus resultados</span>
+            </div>
+          </div>
+          <div class="pilar">
+            <div class="pilar-icon" aria-hidden="true">⚙️</div>
+            <div class="pilar-text">
+              <strong>Equipamiento premium</strong>
+              <span>Maquinaria de última generación, siempre mantenida</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICIOS ═══════════════════════════════════════════ -->
+<section id="servicios" aria-labelledby="h-servicios">
+  <div class="container">
+
+    <div class="text-center appear">
+      <p class="section-tag">Lo que ofrecemos</p>
+      <h2 class="section-title" id="h-servicios">Servicios diseñados<br>para tu progreso</h2>
+      <div class="sep"></div>
+    </div>
+    <p class="section-sub appear">
+      Cada servicio está pensado para maximizar tus resultados,
+      adaptándose a tu nivel y objetivos personales.
+    </p>
+
+    <div class="servicios-grid">
+
+      <article class="serv-card appear">
+        <div class="serv-icon" aria-hidden="true">🤝</div>
+        <h3>Entrenamiento Personal</h3>
+        <p>Sesiones 1 a 1 con un coach certificado que diseña tu plan de entrenamiento y te acompaña en cada repetición.</p>
+        <span class="serv-link">Más info</span>
+      </article>
+
+      <article class="serv-card appear">
+        <div class="serv-icon" aria-hidden="true">⚡</div>
+        <h3>Clases Grupales</h3>
+        <p>HIIT, entrenamiento funcional y cardio en grupo. Más de 30 clases semanales para todos los niveles y horarios.</p>
+        <span class="serv-link">Ver horarios</span>
+      </article>
+
+      <article class="serv-card appear">
+        <div class="serv-icon" aria-hidden="true">🏋️</div>
+        <h3>Zona de Musculación</h3>
+        <p>2.500 m² de equipamiento de alta gama: mancuernas, barras olímpicas, poleas, máquinas de cables y mucho más.</p>
+        <span class="serv-link">Ver instalaciones</span>
+      </article>
+
+      <article class="serv-card appear">
+        <div class="serv-icon" aria-hidden="true">📋</div>
+        <h3>Planes Personalizados</h3>
+        <p>Tu entrenador diseña un plan exclusivo adaptado a tu cuerpo, objetivos y disponibilidad horaria. Sin plantillas genéricas.</p>
+        <span class="serv-link">Solicitar plan</span>
+      </article>
+
+      <article class="serv-card appear">
+        <div class="serv-icon" aria-hidden="true">🥗</div>
+        <h3>Asesoramiento Nutricional</h3>
+        <p>Orientación básica de nutrición para complementar tu entrenamiento. Pautas prácticas sin complicaciones innecesarias.</p>
+        <span class="serv-link">Saber más</span>
+      </article>
+
+      <article class="serv-card appear">
+        <div class="serv-icon" aria-hidden="true">📱</div>
+        <h3>App Iron Forge</h3>
+        <p>Seguimiento de tu progreso, reserva de clases y comunicación directa con tu entrenador desde tu móvil.</p>
+        <span class="serv-link">Descargar</span>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PLANES / PRECIOS ════════════════════════════════════ -->
+<section id="planes" aria-labelledby="h-planes">
+  <div class="container">
+
+    <div class="text-center appear">
+      <p class="section-tag">Planes y precios</p>
+      <h2 class="section-title" id="h-planes">Elige tu plan,<br>empieza tu cambio</h2>
+      <div class="sep"></div>
+    </div>
+    <p class="section-sub appear">
+      Sin permanencias. Sin letras pequeñas. Cancela cuando quieras.
+    </p>
+
+    <div class="planes-grid">
+
+      <!-- Plan Básico -->
+      <article class="plan-card appear">
+        <p class="plan-nombre">Básico</p>
+        <div class="plan-precio">
+          <sup>€</sup><big>29</big><small>/mes</small>
+        </div>
+        <p class="plan-desc">Acceso libre a las instalaciones para ponerte en marcha.</p>
+        <ul class="plan-lista" aria-label="Incluye">
+          <li class="plan-item"><span class="check">✓</span> Acceso ilimitado sala</li>
+          <li class="plan-item"><span class="check">✓</span> Vestuarios y taquillas</li>
+          <li class="plan-item"><span class="check">✓</span> App Iron Forge</li>
+          <li class="plan-item no"><span class="check">✗</span> Clases grupales</li>
+          <li class="plan-item no"><span class="check">✗</span> Entrenador personal</li>
+          <li class="plan-item no"><span class="check">✗</span> Plan nutricional</li>
+        </ul>
+        <button class="plan-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+          Elegir Básico
+        </button>
+      </article>
+
+      <!-- Plan Pro (destacado) -->
+      <article class="plan-card destacado appear">
+        <div class="plan-badge">⭐ Más popular</div>
+        <p class="plan-nombre">Pro</p>
+        <div class="plan-precio">
+          <sup>€</sup><big>49</big><small>/mes</small>
+        </div>
+        <p class="plan-desc">El equilibrio perfecto entre precio y resultados.</p>
+        <ul class="plan-lista" aria-label="Incluye">
+          <li class="plan-item"><span class="check">✓</span> Acceso ilimitado sala</li>
+          <li class="plan-item"><span class="check">✓</span> Vestuarios y taquillas</li>
+          <li class="plan-item"><span class="check">✓</span> App Iron Forge</li>
+          <li class="plan-item"><span class="check">✓</span> Clases grupales ilimitadas</li>
+          <li class="plan-item"><span class="check">✓</span> 2 sesiones PT/mes</li>
+          <li class="plan-item no"><span class="check">✗</span> Plan nutricional</li>
+        </ul>
+        <button class="plan-btn primary" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+          Elegir Pro
+        </button>
+      </article>
+
+      <!-- Plan Elite -->
+      <article class="plan-card appear">
+        <p class="plan-nombre">Elite</p>
+        <div class="plan-precio">
+          <sup>€</sup><big>89</big><small>/mes</small>
+        </div>
+        <p class="plan-desc">Máxima dedicación y resultados garantizados.</p>
+        <ul class="plan-lista" aria-label="Incluye">
+          <li class="plan-item"><span class="check">✓</span> Acceso ilimitado sala</li>
+          <li class="plan-item"><span class="check">✓</span> Vestuarios y taquillas</li>
+          <li class="plan-item"><span class="check">✓</span> App Iron Forge Premium</li>
+          <li class="plan-item"><span class="check">✓</span> Clases grupales ilimitadas</li>
+          <li class="plan-item"><span class="check">✓</span> 8 sesiones PT/mes</li>
+          <li class="plan-item"><span class="check">✓</span> Plan nutricional personalizado</li>
+        </ul>
+        <button class="plan-btn" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">
+          Elegir Elite
+        </button>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ INSTALACIONES ═══════════════════════════════════════ -->
+<section id="instalaciones" aria-labelledby="h-instalaciones">
+  <div class="container">
+
+    <div class="text-center appear">
+      <p class="section-tag">Nuestro espacio</p>
+      <h2 class="section-title" id="h-instalaciones">Instalaciones a tu altura</h2>
+      <div class="sep"></div>
+    </div>
+    <p class="section-sub appear">
+      2.500 m² equipados con la mejor maquinaria del mercado,
+      mantenida y renovada cada año.
+    </p>
+
+    <div class="instal-grid">
+
+      <article class="instal-card appear">
+        <div class="instal-ico" aria-hidden="true">🏋️</div>
+        <div>
+          <h3>Sala de musculación</h3>
+          <p>Zona de peso libre con barras olímpicas, mancuernas hasta 60 kg, racks de squat, bancos y todo lo que necesitas para el entrenamiento serio.</p>
+        </div>
+      </article>
+
+      <article class="instal-card appear">
+        <div class="instal-ico" aria-hidden="true">🔄</div>
+        <div>
+          <h3>Sala de cardio</h3>
+          <p>Cintas de correr, bicicletas, elípticas y remos de última generación con pantallas integradas y conectividad con la app del gimnasio.</p>
+        </div>
+      </article>
+
+      <article class="instal-card appear">
+        <div class="instal-ico" aria-hidden="true">🧘</div>
+        <div>
+          <h3>Sala de clases dirigidas</h3>
+          <p>Espacio de 400 m² con suelo técnico, espejos, audio profesional y climatización para las clases grupales más exigentes.</p>
+        </div>
+      </article>
+
+      <article class="instal-card appear">
+        <div class="instal-ico" aria-hidden="true">🚿</div>
+        <div>
+          <h3>Vestuarios premium</h3>
+          <p>Taquillas individuales, duchas privadas con agua caliente garantizada, zona de aseo completa y ambiente siempre impecable.</p>
+        </div>
+      </article>
+
+      <article class="instal-card appear">
+        <div class="instal-ico" aria-hidden="true">🍵</div>
+        <div>
+          <h3>Zona de recuperación</h3>
+          <p>Área de estiramientos, rodillos de foam, colchonetas y zona de batidos proteicos para optimizar tu recuperación post-entrenamiento.</p>
+        </div>
+      </article>
+
+      <article class="instal-card appear">
+        <div class="instal-ico" aria-hidden="true">🅿️</div>
+        <div>
+          <h3>Parking gratuito</h3>
+          <p>Aparcamiento propio con plazas reservadas para socios. Sin estrés, sin excusas para venir a entrenar.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BANNER CTA ══════════════════════════════════════════ -->
+<div class="cta-banner" role="complementary" aria-label="Oferta especial">
+  <div class="container cta-inner">
+    <h2>Primera semana <span class="rojo" style="color:#fff;text-decoration:underline;text-decoration-color:var(--rojo)">gratis</span></h2>
+    <p>Sin compromiso, sin tarjeta de crédito. Ven, entrena y comprueba
+       por qué más de 1.200 personas eligieron Iron Forge Gym.</p>
+    <a href="#contacto" class="btn btn-blanco">
+      💪 Quiero mi semana gratis
+    </a>
+  </div>
+</div>
+
+<!-- ═══ OPINIONES ═══════════════════════════════════════════ -->
+<section id="opiniones" aria-labelledby="h-opiniones">
+  <div class="container">
+
+    <div class="text-center appear">
+      <p class="section-tag">Testimonios</p>
+      <h2 class="section-title" id="h-opiniones">Lo que dicen<br>nuestros socios</h2>
+      <div class="sep"></div>
+    </div>
+    <p class="section-sub appear">Resultados reales de personas reales.</p>
+
+    <div class="opiniones-grid">
+
+      <article class="opinion-card appear">
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="opinion-texto">Llevo 6 meses en Iron Forge y he perdido 12 kg mientras ganaba músculo. Mi entrenador me ha cambiado la vida. Imposible volver a un gym normal.</p>
+        <div class="opinion-autor">
+          <div class="opinion-avatar" aria-hidden="true">CM</div>
+          <div>
+            <p class="opinion-nombre">Carlos M.</p>
+            <p class="opinion-meta">Socio desde 2023 · Plan Elite</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="opinion-card appear">
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="opinion-texto">Las clases de HIIT son brutales en el buen sentido. El ambiente te engancha desde el primer día y el equipo siempre está dispuesto a ayudarte.</p>
+        <div class="opinion-autor">
+          <div class="opinion-avatar" aria-hidden="true">SR</div>
+          <div>
+            <p class="opinion-nombre">Sara R.</p>
+            <p class="opinion-meta">Socia desde 2022 · Plan Pro</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="opinion-card appear">
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="opinion-texto">Probé varios gimnasios en Barcelona y ninguno se acerca a Iron Forge. El equipamiento es de primer nivel y el precio es muy competitivo para lo que ofrece.</p>
+        <div class="opinion-autor">
+          <div class="opinion-avatar" aria-hidden="true">JL</div>
+          <div>
+            <p class="opinion-nombre">Javier L.</p>
+            <p class="opinion-meta">Socio desde 2021 · Plan Básico</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="opinion-card appear">
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="opinion-texto">Empecé sin saber nada de entrenamiento y en 3 meses ya noto un cambio real. El asesoramiento nutricional fue clave para entender cómo comer correctamente.</p>
+        <div class="opinion-autor">
+          <div class="opinion-avatar" aria-hidden="true">MP</div>
+          <div>
+            <p class="opinion-nombre">María P.</p>
+            <p class="opinion-meta">Socia desde 2024 · Plan Elite</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="opinion-card appear">
+        <div class="stars" aria-label="4 estrellas">★★★★☆</div>
+        <p class="opinion-texto">El parking gratuito y los horarios tan amplios hacen que siempre puedas cuadrar el entrenamiento con el trabajo. Un detalle que se agradece muchísimo.</p>
+        <div class="opinion-autor">
+          <div class="opinion-avatar" aria-hidden="true">DG</div>
+          <div>
+            <p class="opinion-nombre">David G.</p>
+            <p class="opinion-meta">Socio desde 2023 · Plan Pro</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="opinion-card appear">
+        <div class="stars" aria-label="5 estrellas">★★★★★</div>
+        <p class="opinion-texto">Vine con el objetivo de prepararme para una maratón y Iron Forge me dio las herramientas y el apoyo para conseguirlo. Equipo increíble y muy profesional.</p>
+        <div class="opinion-autor">
+          <div class="opinion-avatar" aria-hidden="true">AL</div>
+          <div>
+            <p class="opinion-nombre">Ana L.</p>
+            <p class="opinion-meta">Socia desde 2022 · Plan Elite</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACTO ════════════════════════════════════════════ -->
+<section id="contacto" aria-labelledby="h-contacto">
+  <div class="container">
+
+    <div class="text-center appear">
+      <p class="section-tag">Apúntate ahora</p>
+      <h2 class="section-title" id="h-contacto">Empieza hoy.<br>Sin excusas.</h2>
+      <div class="sep"></div>
+    </div>
+    <p class="section-sub appear">
+      Rellena el formulario y uno de nuestros entrenadores se pondrá
+      en contacto contigo en menos de 24 horas.
+    </p>
+
+    <div class="contacto-grid">
+
+      <!-- Info de contacto -->
+      <div class="contacto-info appear">
+        <p>Ven a conocernos o escríbenos. Estaremos encantados de resolver
+           todas tus dudas y preparar tu primera semana de prueba gratuita.</p>
+
+        <div class="dato">
+          <span class="dato-ico" aria-hidden="true">📍</span>
+          <div>
+            <p class="dato-label">Dirección</p>
+            <p class="dato-val">Avenida del Progreso, 45<br>Barcelona</p>
+          </div>
+        </div>
+        <div class="dato">
+          <span class="dato-ico" aria-hidden="true">📞</span>
+          <div>
+            <p class="dato-label">Teléfono</p>
+            <p class="dato-val"><a href="tel:600987654" style="color:var(--blanco)">600 987 654</a></p>
+          </div>
+        </div>
+        <div class="dato">
+          <span class="dato-ico" aria-hidden="true">📧</span>
+          <div>
+            <p class="dato-label">Email</p>
+            <p class="dato-val">info@ironforgegym.es</p>
+          </div>
+        </div>
+        <div class="dato">
+          <span class="dato-ico" aria-hidden="true">🕒</span>
+          <div>
+            <p class="dato-label">Horario</p>
+            <p class="dato-val">Lun–Vie: 6:00 – 23:00<br>Sáb–Dom: 8:00 – 21:00</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="form-card appear">
+        <h3>💪 Quiero apuntarme</h3>
+        <form id="contactForm" novalidate aria-label="Formulario de contacto">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+            </div>
+            <div class="form-group">
+              <label for="apellidos">Apellidos</label>
+              <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required autocomplete="family-name">
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="600 000 000" autocomplete="tel">
+            </div>
+            <div class="form-group">
+              <label for="plan">Plan de interés</label>
+              <select id="plan" name="plan">
+                <option value="">Selecciona un plan</option>
+                <option value="basico">Básico — 29 €/mes</option>
+                <option value="pro">Pro — 49 €/mes ⭐</option>
+                <option value="elite">Elite — 89 €/mes</option>
+                <option value="info">Solo quiero información</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="objetivo">¿Cuál es tu objetivo?</label>
+              <select id="objetivo" name="objetivo">
+                <option value="">Selecciona objetivo</option>
+                <option value="fuerza">Ganar fuerza y músculo</option>
+                <option value="perder">Perder peso</option>
+                <option value="resistencia">Mejorar resistencia</option>
+                <option value="salud">Mejorar salud general</option>
+                <option value="competicion">Preparación deportiva</option>
+              </select>
+            </div>
+            <div class="form-group form-full">
+              <label for="mensaje">Cuéntanos algo más (opcional)</label>
+              <textarea id="mensaje" name="mensaje" placeholder="¿Tienes alguna lesión? ¿Experiencia previa? ¿Preguntas?"></textarea>
+            </div>
+          </div>
+          <div class="form-submit">
+            <button type="submit" class="btn btn-rojo">
+              💪 Apúntame ahora
+            </button>
+          </div>
+          <p class="form-nota" id="formMsg">🔒 Tus datos están protegidos. Solo los usaremos para contactarte.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ══════════════════════════════════════════════ -->
+<footer role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <!-- Marca -->
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon" aria-hidden="true">💪</div>
+          <span class="footer-logo-text">IRON <span>FORGE</span></span>
+        </div>
+        <p>Forjamos cuerpos, forjamos disciplina, forjamos tu mejor versión. Gimnasio premium en Barcelona desde 2016.</p>
+        <div class="footer-social" aria-label="Redes sociales">
+          <a href="#" class="social-btn" aria-label="Instagram">📸</a>
+          <a href="#" class="social-btn" aria-label="Facebook">📘</a>
+          <a href="#" class="social-btn" aria-label="TikTok">🎵</a>
+          <a href="#" class="social-btn" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="#nosotros">Sobre nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#planes">Precios</a></li>
+          <li><a href="#instalaciones">Instalaciones</a></li>
+          <li><a href="#opiniones">Opiniones</a></li>
+        </ul>
+      </div>
+
+      <!-- Servicios -->
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#servicios">Entrenamiento personal</a></li>
+          <li><a href="#servicios">Clases grupales</a></li>
+          <li><a href="#servicios">Musculación</a></li>
+          <li><a href="#servicios">Planes personalizados</a></li>
+          <li><a href="#servicios">Nutrición</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto -->
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <ul>
+          <li><a href="#">📍 Av. del Progreso, 45, BCN</a></li>
+          <li><a href="tel:600987654">📞 600 987 654</a></li>
+          <li><a href="mailto:info@ironforgegym.es">📧 info@ironforgegym.es</a></li>
+          <li><a href="#">🕒 Lun–Vie: 6:00–23:00</a></li>
+          <li><a href="#">🕒 Sáb–Dom: 8:00–21:00</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 <span>Iron Forge Gym</span>. Todos los derechos reservados.</p>
+      <p>
+        <a href="#" style="color:var(--gris);transition:color .2s" onmouseover="this.style.color='var(--rojo)'" onmouseout="this.style.color='var(--gris)'">Política de privacidad</a>
+        &nbsp;·&nbsp;
+        <a href="#" style="color:var(--gris);transition:color .2s" onmouseover="this.style.color='var(--rojo)'" onmouseout="this.style.color='var(--gris)'">Aviso legal</a>
+        &nbsp;·&nbsp;
+        <a href="#" style="color:var(--gris);transition:color .2s" onmouseover="this.style.color='var(--rojo)'" onmouseout="this.style.color='var(--gris)'">Cookies</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══ JAVASCRIPT ══════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ── Menú hamburguesa ──────────────────────────────────────── */
+const ham     = document.getElementById('navHam');
+const mobile  = document.getElementById('navMobile');
+
+ham.addEventListener('click', () => {
+  const open = ham.classList.toggle('open');
+  mobile.classList.toggle('open', open);
+  ham.setAttribute('aria-expanded', open);
+  mobile.setAttribute('aria-hidden', !open);
+});
+
+/* Cerrar menú al hacer clic en un enlace interno */
+mobile.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    mobile.classList.remove('open');
+    ham.setAttribute('aria-expanded', 'false');
+    mobile.setAttribute('aria-hidden', 'true');
+  });
+});
+
+/* ── Nav transparente al llegar al hero ──────────────────── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.style.background = window.scrollY > 60
+    ? 'rgba(13,13,13,.97)'
+    : 'rgba(13,13,13,.92)';
+}, { passive: true });
+
+/* ── Animaciones de aparición al hacer scroll ─────────────── */
+const observer = new IntersectionObserver(
+  entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  }),
+  { threshold: .12 }
+);
+document.querySelectorAll('.appear').forEach(el => observer.observe(el));
+
+/* ── Actualizar slider de gradiente en inputs range ──────── */
+document.querySelectorAll('input[type="range"]').forEach(r => {
+  const update = () => {
+    const pct = ((r.value - r.min) / (r.max - r.min)) * 100;
+    r.style.background = `linear-gradient(90deg, var(--rojo) ${pct}%, rgba(255,255,255,.1) ${pct}%)`;
+  };
+  update(); r.addEventListener('input', update);
+});
+
+/* ── Formulario ───────────────────────────────────────────── */
+const form    = document.getElementById('contactForm');
+const formMsg = document.getElementById('formMsg');
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const nombre = document.getElementById('nombre').value.trim();
+  const email  = document.getElementById('email').value.trim();
+  const re     = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  if (!nombre) { shake(document.getElementById('nombre')); return; }
+  if (!re.test(email)) { shake(document.getElementById('email')); return; }
+
+  /* Simulación de envío exitoso */
+  const btn = form.querySelector('button[type="submit"]');
+  btn.textContent = '✓ ¡Enviado! Te llamamos pronto';
+  btn.style.background = '#059669';
+  btn.style.borderColor = '#059669';
+  btn.disabled = true;
+  formMsg.textContent = '🎉 Hemos recibido tu solicitud. Contactaremos contigo en menos de 24 h.';
+  formMsg.style.color = '#6ee7b7';
+});
+
+function shake(el) {
+  el.style.animation = 'none';
+  el.offsetHeight; /* reflow */
+  el.style.borderColor = 'var(--rojo)';
+  el.style.animation = 'shakeX .4s ease';
+  el.focus();
+  setTimeout(() => { el.style.animation = ''; el.style.borderColor = ''; }, 600);
+}
+
+/* Añadir animación shakeX al CSS dinámicamente */
+const style = document.createElement('style');
+style.textContent = `@keyframes shakeX {
+  0%,100%{transform:translateX(0)}
+  20%,60%{transform:translateX(-6px)}
+  40%,80%{transform:translateX(6px)}
+}`;
+document.head.appendChild(style);
+</script>
+
+</body>
+</html>
